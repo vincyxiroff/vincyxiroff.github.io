@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  /* The animation code */
+  @keyframes example {
+    0% {
+      background-color: red;
+    }
+
+    25% {
+      background-color: yellow;
+    }
+
+    50% {
+      background-color: blue;
+    }
+
+    100% {
+      background-color: green;
+    }
+  }
+
+  /* The element to apply the animation to */
+  p.normale {
+    width: 189px;
+    height: 32px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 600px) {
+
+    /* For tablets: */
+    .col-s-1 {
+      width: 8.33%;
+    }
+
+    .col-s-2 {
+      width: 16.66%;
+    }
+
+    .col-s-3 {
+      width: 25%;
+    }
+
+    .col-s-4 {
+      width: 33.33%;
+    }
+
+    .col-s-5 {
+      width: 41.66%;
+    }
+
+    .col-s-6 {
+      width: 50%;
+    }
+
+    .col-s-7 {
+      width: 58.33%;
+    }
+
+    .col-s-8 {
+      width: 66.66%;
+    }
+
+    .col-s-9 {
+      width: 75%;
+    }
+
+    .col-s-10 {
+      width: 83.33%;
+    }
+
+    .col-s-11 {
+      width: 91.66%;
+    }
+
+    .col-s-12 {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+
+    /* For desktop: */
+    .col-1 {
+      width: 8.33%;
+    }
+
+    .col-2 {
+      width: 16.66%;
+    }
+
+    .col-3 {
+      width: 25%;
+    }
+
+    .col-4 {
+      width: 33.33%;
+    }
+
+    .col-5 {
+      width: 41.66%;
+    }
+
+    .col-6 {
+      width: 50%;
+    }
+
+    .col-7 {
+      width: 58.33%;
+    }
+
+    .col-8 {
+      width: 66.66%;
+    }
+
+    .col-9 {
+      width: 75%;
+    }
+
+    .col-10 {
+      width: 83.33%;
+    }
+
+    .col-11 {
+      width: 91.66%;
+    }
+
+    .col-12 {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #CE3515;
+    text-align: center;
+    border: 3px solid purple;
+
+  }
+
+
+  p.normale {
+    font-style: normal;
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+
+  body {
+    background-color: peachpuff;
+  }
+
+  div1 {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+  }
+
+  p.normale {
+    text-shadow: 2px 2px 5px red;
+  }
+
+  div2 {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+  }
+
+  ul {
+    font-style: normal;
+    font-family: 'Brush Script MT', cursive;
+  }
+</style>
+
+
+<body>
+  <div class="div1">
+    <h1> Siamo gli Sfasolati della 3i</h1>
+    <p class="normale">Il nostro blog! Chi siamo?</p>
+  </div>
+  <div class="div2">
+    <ul>
+      <li>Noemy: sono Noemy con la y</li>
+      <li>Maurizio: Il capo degli sfasolati</li>
+      <li>Emanuel: sono Emanuel Il boss</li>
+      <li>Salvatore C.: sono Cerchiaro inscritto in un quadrato</li>
+      <li>Francesco: sono francesco il pazzoide</li>
+      <li>Caterina: sono katina l'esplosiva</li>
+      <li>Salvatore P.: sono il Gigante buono</li>
+      <li>vincyxir: sono il best programmatore</li>
+      <li>Vincenzo D.: </li>
+      <li>Francesca F.:</li>
+      <li>Francesca R.:</li>
+      <li>Ciro:</li>
+      <li>Pierpaolo:</li>
+      <li>Chiara:</li>
+    </ul>
+    <img src="invalsi-matematica.jpg" alt="3media">
+  </div>
+</body>
+
+</html>
