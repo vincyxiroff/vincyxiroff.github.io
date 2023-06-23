@@ -4,10 +4,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ADV - Albero della Vita</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+    
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
     }
     
     header {
@@ -19,13 +25,19 @@
     
     h1 {
       margin: 0;
-      font-size: 28px;
+      font-size: 36px;
+    }
+    
+    nav {
+      background-color: #222;
+      padding: 10px;
+      text-align: center;
     }
     
     nav ul {
       list-style-type: none;
-      padding: 0;
       margin: 0;
+      padding: 0;
     }
     
     nav ul li {
@@ -36,7 +48,9 @@
     nav ul li a {
       color: #fff;
       text-decoration: none;
-      padding: 5px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
     
     nav ul li a:hover {
@@ -44,20 +58,38 @@
     }
     
     section {
-      padding: 20px;
+      padding: 40px;
+      text-align: center;
+    }
+    
+    h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #555;
+    }
+    
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #777;
     }
     
     footer {
       background-color: #333;
       color: #fff;
-      padding: 10px;
+      padding: 20px;
       text-align: center;
+    }
+    
+    footer p {
+      margin: 0;
+      font-size: 14px;
     }
     
     /* Stili per dispositivi mobili */
     @media (max-width: 768px) {
       h1 {
-        font-size: 24px;
+        font-size: 30px;
       }
       
       nav ul li {
@@ -65,15 +97,14 @@
         margin: 10px 0;
       }
       
-      footer {
-        position: relative;
+      section {
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.jpg" alt="Logo ADV - Albero della Vita">
     <h1>ADV - Albero della Vita</h1>
     <nav>
       <ul>
