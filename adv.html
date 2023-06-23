@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ADV - Albero della Vita</title>
   <style>
     body {
@@ -51,21 +52,24 @@
       color: #fff;
       padding: 10px;
       text-align: center;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+    }
+    
+    /* Stili per dispositivi mobili */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 24px;
+      }
+      
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+      
+      footer {
+        position: relative;
+      }
     }
   </style>
-  <script>
-    // Codice JavaScript per animazioni o interazioni aggiuntive
-    window.addEventListener('DOMContentLoaded', function() {
-      // Esempio di codice JavaScript per animazione
-      var logo = document.querySelector('img');
-      logo.addEventListener('click', function() {
-        alert('Il signore ti ama!');
-      });
-    });
-  </script>
 </head>
 <body>
   <header>
