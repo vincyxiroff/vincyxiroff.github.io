@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- https://www.wmtips.com/tools/html-obfuscator/#form -->
+  <title>Stock</title>
+</head>
+<body>
+  <div>
+    <h3>TikTok</h3>
+    <h2>Stock A:</h2>
+    <p id="stockA">Caricamento...</p>
+  </div>
+  <div>
+    <h3>Instagram</h3>
+    <h2>Stock B:</h2>
+    <p id="stockB">Caricamento...</p>
+  </div>
+  <div>
+    <h3>YouTube</h3>
+    <h2>Stock C:</h2>
+    <p id="stockC">Caricamento...</p>
+  </div>
+
+  <script>
+    function formatNumber(number) {
+      if (number >= 1000000) {
+        return (number / 1000000).toFixed(2) + 'M';
+      } else if (number >= 1000) {
+        return (number / 1000).toFixed(2) + 'k';
+      } else {
+        return number.toString();
+      }
+    }
+
+    function updateStock() {
+      const minA = 700000;
+      const maxA = 1300000;
+      const minB = 700000;
+      const maxB = 1300000;
+      const minC = 200000;
+      const maxC = 350000;
+
+      let randomA, randomB, randomC;
+
+      // Leggi i valori salvati in localStorage
+      randomA = parseFloat(localStorage.getItem('stockA')) || Math.floor(Math.random() * (maxA - minA + 1)) + minA;
+      randomB = parseFloat(localStorage.getItem('stockB')) || Math.floor(Math.random() * (maxB - minB + 1)) + minB;
+      randomC = Math.floor(Math.random() * (maxC - minC + 1)) + minC;
+
+      // Ogni 5 minuti, sottrai 3k dai valori di A e B
+      const currentTime = new Date();
+      const minutes = currentTime.getMinutes();
+      if (minutes % 5 === 0) {
+        randomA = Math.max(minA, randomA - 3000);
+        randomB = Math.max(minB, randomB - 3000);
+      }
+
+      document.getElementById('stockA').textContent = `Valore A: ${formatNumber(randomA)}`;
+      document.getElementById('stockB').textContent = `Valore B: ${formatNumber(randomB)}`;
+      document.getElementById('stockC').textContent = `Valore C: ${formatNumber(randomC)}`;
+
+      // Salva i valori in localStorage
+      localStorage.setItem('stockA', randomA);
+      localStorage.setItem('stockB', randomB);
+    }
+
+    updateStock();
+    setInterval(updateStock, 300000); // Aggiorna ogni 5 minuti
+  </script>
+</body>
+</html>
